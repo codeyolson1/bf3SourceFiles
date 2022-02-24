@@ -19,7 +19,7 @@ class G4LogicalVolume;
 class DetectorConstruction : public G4VUserDetectorConstruction
 {
   public:
-    DetectorConstruction(G4bool);
+    DetectorConstruction();
     virtual ~DetectorConstruction();
 
     virtual G4VPhysicalVolume* Construct();
@@ -30,7 +30,6 @@ class DetectorConstruction : public G4VUserDetectorConstruction
 
   public:
     void ConstructMaterials();
-    G4bool isHe3;
 
 };
 

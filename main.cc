@@ -25,16 +25,14 @@ int main(int argc, char** argv)
   G4Random::setTheEngine(new CLHEP::MixMaxRng);
   G4MTRunManager* runManager = new G4MTRunManager;
 
-  // Set this true or false to test He3 or BF3, respectively:
-  G4bool He3 = true;
-  runManager->SetUserInitialization(new DetectorConstruction(He3));
+  runManager->SetUserInitialization(new DetectorConstruction());
 
   G4VModularPhysicsList* physicsList = new PhysicsList();
   physicsList->SetVerboseLevel(1);
   runManager->SetUserInitialization(physicsList);
   runManager->SetVerboseLevel(0);
 
-  runManager->SetUserInitialization(new ActionInitialization(He3));
+  runManager->SetUserInitialization(new ActionInitialization());
 
   G4VisManager* visManager = new G4VisExecutive;
   visManager->Initialize();
@@ -43,13 +41,14 @@ int main(int argc, char** argv)
 
   if ( !ui ) {
     // batch mode - Apply macros directly 
-    UImanager->ApplyCommand("/control/macroPath /home/codeyolson/he3_bf3_SourceFiles/macros");
+    UImanager->ApplyCommand("/control/macroPath ../macros/");
+    UImanager->ApplyCommand("/control/execute init.mac");
     G4String command = "/control/execute ";
     G4String fileName = argv[1];
     UImanager->ApplyCommand(command+fileName);
   } else {
     // Interactive Mode:
-    //UImanager->ApplyCommand("/control/macroPath /reactorBay_sourceFiles");
+    UImanager->ApplyCommand("/control/macroPath ../macros");
     UImanager->ApplyCommand("/control/execute init.mac");
     ui->SessionStart();
     delete ui;

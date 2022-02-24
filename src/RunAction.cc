@@ -22,19 +22,13 @@
 #include "G4StatAnalysis.hh"
 #include "G4RunManager.hh"
 #include "G4ConvergenceTester.hh"
-#include "tools/mpi/wrmpi"
+
 #include <iostream>
 #include <fstream>
-RunAction::RunAction(G4bool He3) : G4UserRunAction()
+RunAction::RunAction() : G4UserRunAction()
 {
-  isHe3 = He3;
-G4String primEnergy = "grp28";
-  if (He3) {
-    outFileName = "EDep_He3_" + primEnergy;
-  } else {
-    outFileName = "EDep_BF3_" + primEnergy;
-  }
-  eDepTest = new G4ConvergenceTester("EnergyDeposition");
+  outFileName = "EDep_BF3_";
+  
 }
 //
 //
@@ -44,39 +38,27 @@ RunAction::~RunAction()
 //
 G4Run* RunAction::GenerateRun()
 {
-  return new Run(isHe3);
+  return new Run();
 }
 //
 //
 void RunAction::BeginOfRunAction(const G4Run*)
 {
   Analysis* myAnalysis = Analysis::GetAnalysis();
-  myAnalysis->Book(isHe3);
+  myAnalysis->Book(outFileName);
   myAnalysis->OpenFile(outFileName);
-  if (IsMaster()) {
-    eDepTest = new G4ConvergenceTester("EnergyDeposition");
-  }
 } 
 //
 //
 void RunAction::EndOfRunAction(const G4Run* aRun)
 {
-  Analysis* myana = Analysis::GetAnalysis();
+  Analysis* myAnalysis = Analysis::GetAnalysis();
   if (IsMaster()) {
     G4cout << "End of Global Run" << G4endl;
-    myana->Save();
-    myana->Close();
-    const Run* myRun = static_cast<const Run*>(aRun);
-    for (G4int i = 0; i != myRun->GetNumEntries(); i++) {
-      G4double eDep = myRun->GetEDepAtEvent(i);
-      eDepTest->AddScore(eDep);
-    }
-    std::ofstream convergence;
-    convergence.open("convergence.txt");
-    eDepTest->ShowResult(convergence);
-    eDepTest->ShowHistory(convergence);
-    convergence.close();
+    myAnalysis->Save();
+    myAnalysis->Close();
+    myAnalysis->CheckConvergence();
   } else {
-    myana->Save();
+    myAnalysis->Save();
   }
 }

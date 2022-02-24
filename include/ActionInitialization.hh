@@ -16,14 +16,13 @@
 class ActionInitialization : public G4VUserActionInitialization
 {
     public:
-        ActionInitialization(G4bool);
+        ActionInitialization();
         virtual ~ActionInitialization();
 
         virtual void BuildForMaster() const;
         virtual void Build() const;
 
     private:
-        G4bool isHe3;
 };
 
 #endif

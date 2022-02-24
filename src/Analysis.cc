@@ -15,8 +15,17 @@
 
 G4ThreadLocal Analysis* theAnalysis = 0;
 
+namespace {
+  G4Mutex aMutex = G4MUTEX_INITIALIZER;
+  G4ConvergenceTester* fConvTest1 = new G4ConvergenceTester("ConvTest1");
+}
+
 Analysis::Analysis()
 {
+  eDepHist = 0;
+  primEneHist = 0;
+  primPosHist = 0;
+  convergenceName = "";
 }
 
 //
@@ -41,8 +50,9 @@ Analysis* Analysis::GetAnalysis()
 //
 //
 
-void Analysis::Book(G4bool isHe3)
+void Analysis::Book(G4String runName)
 {
+  convergenceName = runName;
   G4AnalysisManager* man = G4AnalysisManager::Instance();
   G4SDManager* sdMan = G4SDManager::GetSDMpointer();
   man->SetVerboseLevel(2);
@@ -51,20 +61,14 @@ void Analysis::Book(G4bool isHe3)
   #endif
   man->SetFirstNtupleId(0);
   man->SetFirstNtupleColumnId(0);
-  if (isHe3) {
-    man->CreateNtuple("Helium3", "Helium3");
-    man->CreateNtupleDColumn("EDep");
-    man->FinishNtuple();
-  } else {
-    man->CreateNtuple("Boron Trifluoride", "Boron Trifluoride");
-    man->CreateNtupleDColumn("EDep");
-    man->FinishNtuple();
-  }
-  man->CreateNtuple("Primary", "Primary");
-  man->CreateNtupleDColumn("Energy");
-  man->CreateNtupleDColumn("XPos");
-  man->CreateNtupleDColumn("YPos");
-  man->FinishNtuple();
+
+  eDepHist1 = man->CreateH1("BF3EnergyDep1", "BF3EnergyDep1", 1000, 0., 5.);
+  eDepHist2 = man->CreateH1("BF3EnergyDep2", "BF3EnergyDep2", 1000, 0., 5.);
+  eDepHistTot = man->CreateH1("BF3EnergyDepTot", "BF3EnergyDepTot", 1000, 0., 5.);
+
+  primEneHist = man->CreateH1("PrimaryEnergy", "PrimaryEnergy", 500, 0., 50.);
+  primPosHist = man->CreateH2("PrimaryPosition", "PrimaryPosition", 110, -5.5, 5.5, 90, -4.5, 4.5);
+  
   return; 
 }
 
@@ -104,22 +108,46 @@ void Analysis::Close(G4bool reset)
 //
 //
 
-void Analysis::FillEDep(G4double eDep, G4int col)
+void Analysis::FillEDep1(G4double eDep)
 {
   //G4cout << "Adding Energy Deposittion. " << G4endl;+
   G4AnalysisManager* man = G4AnalysisManager::Instance();
-  man->FillNtupleDColumn(0, col, eDep);
-  man->AddNtupleRow(0);
+  man->FillH1(eDepHist1, eDep);
+  G4AutoLock l(&aMutex);
+  fConvTest->AddScore(eDep);
   return;
 }
 
 //
 //
 
-void Analysis::FillPrimary(G4double energy)
+void Analysis::FillEDep2(G4double eDep)
+{
+  //G4cout << "Adding Energy Deposittion. " << G4endl;+
+  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  man->FillH1(eDepHist2, eDep);
+  return;
+}
+
+//
+//
+
+void Analysis::FillEDepTot(G4double eDep)
+{
+  //G4cout << "Adding Energy Deposittion. " << G4endl;+
+  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  man->FillH1(eDepHistTot, eDep);
+  return;
+}
+
+//
+//
+
+void Analysis::FillPrimaryEne(G4double energy)
 { 
   G4AnalysisManager* man = G4AnalysisManager::Instance();
-  man->FillNtupleDColumn(1, 0, energy);
+  man->FillH1(primEneHist, energy);
+  return;
 }
 
 //
@@ -128,7 +156,20 @@ void Analysis::FillPrimary(G4double energy)
 void Analysis::FillPrimaryPos(G4double xPos, G4double yPos)
 {
   G4AnalysisManager* man = G4AnalysisManager::Instance();
-  man->FillNtupleDColumn(1, 1, xPos);
-  man->FillNtupleDColumn(1, 2, yPos);
-  man->AddNtupleRow(1);
+  man->FillH2(primPosHist, xPos, yPos);
+  return;
+}
+
+//
+//
+
+void Analysis::CheckConvergence()
+{
+  std::ofstream convOutput;
+  convOutput.open(convergenceName+"-conv.txt");
+  fConvTest->ShowResult(convOutput);
+  fConvTest->ShowHistory(convOutput);
+  convOutput.close();
+
+  return;
 }

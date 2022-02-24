@@ -25,7 +25,7 @@ class G4Run;
 class RunAction : public G4UserRunAction
 {
   public:
-    RunAction(G4bool);
+    RunAction();
     virtual ~RunAction();
 
     virtual G4Run* GenerateRun();
@@ -33,9 +33,7 @@ class RunAction : public G4UserRunAction
     virtual void EndOfRunAction(const G4Run* );
 
   private:
-    G4bool isHe3;
     G4String outFileName;
-    G4ConvergenceTester* eDepTest;
 
 };
 
