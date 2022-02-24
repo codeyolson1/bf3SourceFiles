@@ -12,6 +12,7 @@
 #include "G4SDManager.hh"
 #include "g4root.hh"
 #include "G4RootAnalysisManager.hh"
+#include "G4ConvergenceTester.hh"
 
 G4ThreadLocal Analysis* theAnalysis = 0;
 
@@ -22,7 +23,9 @@ namespace {
 
 Analysis::Analysis()
 {
-  eDepHist = 0;
+  eDepHist1 = 0;
+  eDepHist2 = 0;
+  eDepHistTot = 0;
   primEneHist = 0;
   primPosHist = 0;
   convergenceName = "";
@@ -67,7 +70,7 @@ void Analysis::Book(G4String runName)
   eDepHistTot = man->CreateH1("BF3EnergyDepTot", "BF3EnergyDepTot", 1000, 0., 5.);
 
   primEneHist = man->CreateH1("PrimaryEnergy", "PrimaryEnergy", 500, 0., 50.);
-  primPosHist = man->CreateH2("PrimaryPosition", "PrimaryPosition", 110, -5.5, 5.5, 90, -4.5, 4.5);
+  primPosHist = man->CreateH2("PrimaryPosition", "PrimaryPosition", 180, -9., 9., 110, -5.5, 5.5);
   
   return; 
 }
@@ -114,7 +117,7 @@ void Analysis::FillEDep1(G4double eDep)
   G4AnalysisManager* man = G4AnalysisManager::Instance();
   man->FillH1(eDepHist1, eDep);
   G4AutoLock l(&aMutex);
-  fConvTest->AddScore(eDep);
+  fConvTest1->AddScore(eDep);
   return;
 }
 
@@ -167,8 +170,8 @@ void Analysis::CheckConvergence()
 {
   std::ofstream convOutput;
   convOutput.open(convergenceName+"-conv.txt");
-  fConvTest->ShowResult(convOutput);
-  fConvTest->ShowHistory(convOutput);
+  fConvTest1->ShowResult(convOutput);
+  fConvTest1->ShowHistory(convOutput);
   convOutput.close();
 
   return;

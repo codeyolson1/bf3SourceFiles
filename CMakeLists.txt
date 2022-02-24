@@ -53,19 +53,19 @@ target_link_libraries(bf3 ${Geant4_LIBRARIES} ${G4mpi_LIBRARIES}) #add ${ROOT_LI
 # build B1. This is so that we can run the executable directly because it
 # relies on these scripts being in the current working directory.
 #
-set(reactorBay_scripts
-  init.mac
-  vis.mac
-  run.mac
-)
+#set(reactorBay_scripts
+#  init.mac
+#  vis.mac
+#  run.mac
+#)
 
-foreach(_script ${reactorBay_scripts})
-  configure_file(
-    ${PROJECT_SOURCE_DIR}/${_script}
-    ${PROJECT_BINARY_DIR}/${_script}
-    COPYONLY
-    )
-endforeach()
+#foreach(_script ${reactorBay_scripts})
+#  configure_file(
+#    ${PROJECT_SOURCE_DIR}/${_script}
+#    ${PROJECT_BINARY_DIR}/${_script}
+#    COPYONLY
+#    )
+#endforeach()
 
 # For internal Geant4 use - but has no effect if you build this
 # example standalone
