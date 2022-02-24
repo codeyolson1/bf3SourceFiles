@@ -362,6 +362,7 @@ CMakeFiles/bf3.dir/src/ActionInitialization.cc.o
  ../include/EventAction.hh
  ../include/PrimaryGeneratorAction.hh
  ../include/RunAction.hh
+ ../include/RunActionMessenger.hh
  /mnt/f/bf3SourceFiles/src/ActionInitialization.cc
  /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -2151,6 +2152,7 @@ CMakeFiles/bf3.dir/src/RunAction.cc.o
  ../include/PrimaryGeneratorAction.hh
  ../include/Run.hh
  ../include/RunAction.hh
+ ../include/RunActionMessenger.hh
  /mnt/f/bf3SourceFiles/src/RunAction.cc
  /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -2476,6 +2478,173 @@ CMakeFiles/bf3.dir/src/RunAction.cc.o
  /mnt/f/geant4_install/include/Geant4/globals.hh
  /mnt/f/geant4_install/include/Geant4/pwdefs.hh
  /mnt/f/geant4_install/include/Geant4/rundefs.hh
+ /mnt/f/geant4_install/include/Geant4/templates.hh
+ /mnt/f/geant4_install/include/Geant4/tls.hh
+ /mnt/f/geant4_install/include/Geant4/tools/histo/axes
+ /mnt/f/geant4_install/include/Geant4/tools/histo/axis
+ /mnt/f/geant4_install/include/Geant4/tools/histo/b1
+ /mnt/f/geant4_install/include/Geant4/tools/histo/b2
+ /mnt/f/geant4_install/include/Geant4/tools/histo/base_histo
+ /mnt/f/geant4_install/include/Geant4/tools/histo/h1
+ /mnt/f/geant4_install/include/Geant4/tools/histo/h1d
+ /mnt/f/geant4_install/include/Geant4/tools/histo/h2
+ /mnt/f/geant4_install/include/Geant4/tools/histo/h2d
+ /mnt/f/geant4_install/include/Geant4/tools/histo/histo_data
+ /mnt/f/geant4_install/include/Geant4/tools/lina/eqT
+ /mnt/f/geant4_install/include/Geant4/tools/mem
+ /mnt/f/geant4_install/include/Geant4/trkdefs.hh
+CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o
+ ../include/Analysis.hh
+ ../include/RunAction.hh
+ ../include/RunActionMessenger.hh
+ /mnt/f/bf3SourceFiles/src/RunActionMessenger.cc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/Normal3D.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/Point3D.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/Transform3D.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/Transform3D.icc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Geometry/Vector3D.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Units/PhysicalConstants.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Units/SystemOfUnits.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Utility/defs.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/AxisAngle.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/AxisAngle.icc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/LorentzVector.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/LorentzVector.icc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/Rotation.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/Rotation.icc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/RotationInterfaces.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/RotationX.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/RotationX.icc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/RotationY.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/RotationY.icc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/RotationZ.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/RotationZ.icc
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/ThreeVector.h
+ /mnt/f/geant4_install/include/Geant4/CLHEP/Vector/ThreeVector.icc
+ /mnt/f/geant4_install/include/Geant4/G4Accumulable.hh
+ /mnt/f/geant4_install/include/Geant4/G4Accumulable.icc
+ /mnt/f/geant4_install/include/Geant4/G4AffineTransform.hh
+ /mnt/f/geant4_install/include/Geant4/G4AffineTransform.icc
+ /mnt/f/geant4_install/include/Geant4/G4Allocator.hh
+ /mnt/f/geant4_install/include/Geant4/G4AllocatorPool.hh
+ /mnt/f/geant4_install/include/Geant4/G4ApplicationState.hh
+ /mnt/f/geant4_install/include/Geant4/G4AutoLock.hh
+ /mnt/f/geant4_install/include/Geant4/G4CollectionNameVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4ConvergenceTester.hh
+ /mnt/f/geant4_install/include/Geant4/G4DataVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4DataVector.icc
+ /mnt/f/geant4_install/include/Geant4/G4DynamicParticle.hh
+ /mnt/f/geant4_install/include/Geant4/G4DynamicParticle.icc
+ /mnt/f/geant4_install/include/Geant4/G4ElectronOccupancy.hh
+ /mnt/f/geant4_install/include/Geant4/G4Element.hh
+ /mnt/f/geant4_install/include/Geant4/G4ElementTable.hh
+ /mnt/f/geant4_install/include/Geant4/G4ElementVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4EnvironmentUtils.hh
+ /mnt/f/geant4_install/include/Geant4/G4Exception.hh
+ /mnt/f/geant4_install/include/Geant4/G4ExceptionSeverity.hh
+ /mnt/f/geant4_install/include/Geant4/G4Exp.hh
+ /mnt/f/geant4_install/include/Geant4/G4GeomSplitter.hh
+ /mnt/f/geant4_install/include/Geant4/G4GlobalConfig.hh
+ /mnt/f/geant4_install/include/Geant4/G4HCofThisEvent.hh
+ /mnt/f/geant4_install/include/Geant4/G4HCtable.hh
+ /mnt/f/geant4_install/include/Geant4/G4IonisParamElm.hh
+ /mnt/f/geant4_install/include/Geant4/G4IonisParamMat.hh
+ /mnt/f/geant4_install/include/Geant4/G4Isotope.hh
+ /mnt/f/geant4_install/include/Geant4/G4IsotopeVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4Log.hh
+ /mnt/f/geant4_install/include/Geant4/G4LogicalVolume.hh
+ /mnt/f/geant4_install/include/Geant4/G4LogicalVolume.icc
+ /mnt/f/geant4_install/include/Geant4/G4LorentzVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4Material.hh
+ /mnt/f/geant4_install/include/Geant4/G4MaterialPropertiesIndex.hh
+ /mnt/f/geant4_install/include/Geant4/G4MaterialPropertiesTable.hh
+ /mnt/f/geant4_install/include/Geant4/G4MaterialPropertiesTable.icc
+ /mnt/f/geant4_install/include/Geant4/G4MaterialPropertyVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4MaterialTable.hh
+ /mnt/f/geant4_install/include/Geant4/G4MergeMode.hh
+ /mnt/f/geant4_install/include/Geant4/G4NavigationHistory.hh
+ /mnt/f/geant4_install/include/Geant4/G4NavigationHistory.icc
+ /mnt/f/geant4_install/include/Geant4/G4NavigationHistoryPool.hh
+ /mnt/f/geant4_install/include/Geant4/G4NavigationLevel.hh
+ /mnt/f/geant4_install/include/Geant4/G4NavigationLevel.icc
+ /mnt/f/geant4_install/include/Geant4/G4NavigationLevelRep.hh
+ /mnt/f/geant4_install/include/Geant4/G4NavigationLevelRep.icc
+ /mnt/f/geant4_install/include/Geant4/G4OrderedTable.hh
+ /mnt/f/geant4_install/include/Geant4/G4PDefManager.hh
+ /mnt/f/geant4_install/include/Geant4/G4ParticleDefinition.hh
+ /mnt/f/geant4_install/include/Geant4/G4ParticleDefinition.icc
+ /mnt/f/geant4_install/include/Geant4/G4ParticleMomentum.hh
+ /mnt/f/geant4_install/include/Geant4/G4PhysicsModelCatalog.hh
+ /mnt/f/geant4_install/include/Geant4/G4PhysicsOrderedFreeVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4PhysicsVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4PhysicsVector.icc
+ /mnt/f/geant4_install/include/Geant4/G4PhysicsVectorType.hh
+ /mnt/f/geant4_install/include/Geant4/G4Profiler.hh
+ /mnt/f/geant4_install/include/Geant4/G4Profiler.icc
+ /mnt/f/geant4_install/include/Geant4/G4ReferenceCountedHandle.hh
+ /mnt/f/geant4_install/include/Geant4/G4Region.hh
+ /mnt/f/geant4_install/include/Geant4/G4Region.icc
+ /mnt/f/geant4_install/include/Geant4/G4RotationMatrix.hh
+ /mnt/f/geant4_install/include/Geant4/G4SDManager.hh
+ /mnt/f/geant4_install/include/Geant4/G4SDStructure.hh
+ /mnt/f/geant4_install/include/Geant4/G4SandiaTable.hh
+ /mnt/f/geant4_install/include/Geant4/G4SensitiveVolumeList.hh
+ /mnt/f/geant4_install/include/Geant4/G4SimplexDownhill.hh
+ /mnt/f/geant4_install/include/Geant4/G4SimplexDownhill.icc
+ /mnt/f/geant4_install/include/Geant4/G4StatAnalysis.hh
+ /mnt/f/geant4_install/include/Geant4/G4StatAnalysis.icc
+ /mnt/f/geant4_install/include/Geant4/G4Step.hh
+ /mnt/f/geant4_install/include/Geant4/G4Step.icc
+ /mnt/f/geant4_install/include/Geant4/G4StepPoint.hh
+ /mnt/f/geant4_install/include/Geant4/G4StepPoint.icc
+ /mnt/f/geant4_install/include/Geant4/G4StepStatus.hh
+ /mnt/f/geant4_install/include/Geant4/G4SteppingControl.hh
+ /mnt/f/geant4_install/include/Geant4/G4String.hh
+ /mnt/f/geant4_install/include/Geant4/G4String.icc
+ /mnt/f/geant4_install/include/Geant4/G4Threading.hh
+ /mnt/f/geant4_install/include/Geant4/G4ThreeVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4Timer.hh
+ /mnt/f/geant4_install/include/Geant4/G4Timer.icc
+ /mnt/f/geant4_install/include/Geant4/G4TouchableHandle.hh
+ /mnt/f/geant4_install/include/Geant4/G4TouchableHistory.hh
+ /mnt/f/geant4_install/include/Geant4/G4TouchableHistory.icc
+ /mnt/f/geant4_install/include/Geant4/G4Track.hh
+ /mnt/f/geant4_install/include/Geant4/G4Track.icc
+ /mnt/f/geant4_install/include/Geant4/G4TrackStatus.hh
+ /mnt/f/geant4_install/include/Geant4/G4TrackVector.hh
+ /mnt/f/geant4_install/include/Geant4/G4Transform3D.hh
+ /mnt/f/geant4_install/include/Geant4/G4Types.hh
+ /mnt/f/geant4_install/include/Geant4/G4UIcmdWithADoubleAndUnit.hh
+ /mnt/f/geant4_install/include/Geant4/G4UIcmdWithAString.hh
+ /mnt/f/geant4_install/include/Geant4/G4UIcommand.hh
+ /mnt/f/geant4_install/include/Geant4/G4UIdirectory.hh
+ /mnt/f/geant4_install/include/Geant4/G4UImessenger.hh
+ /mnt/f/geant4_install/include/Geant4/G4UIparameter.hh
+ /mnt/f/geant4_install/include/Geant4/G4UItokenNum.hh
+ /mnt/f/geant4_install/include/Geant4/G4UserRunAction.hh
+ /mnt/f/geant4_install/include/Geant4/G4VAccumulable.hh
+ /mnt/f/geant4_install/include/Geant4/G4VAccumulable.icc
+ /mnt/f/geant4_install/include/Geant4/G4VExceptionHandler.hh
+ /mnt/f/geant4_install/include/Geant4/G4VHit.hh
+ /mnt/f/geant4_install/include/Geant4/G4VHitsCollection.hh
+ /mnt/f/geant4_install/include/Geant4/G4VPhysicalVolume.hh
+ /mnt/f/geant4_install/include/Geant4/G4VPhysicalVolume.icc
+ /mnt/f/geant4_install/include/Geant4/G4VReadOutGeometry.hh
+ /mnt/f/geant4_install/include/Geant4/G4VSDFilter.hh
+ /mnt/f/geant4_install/include/Geant4/G4VSensitiveDetector.hh
+ /mnt/f/geant4_install/include/Geant4/G4VTouchable.hh
+ /mnt/f/geant4_install/include/Geant4/G4VTouchable.icc
+ /mnt/f/geant4_install/include/Geant4/G4VUserTrackInformation.hh
+ /mnt/f/geant4_install/include/Geant4/G4ios.hh
+ /mnt/f/geant4_install/include/Geant4/PTL/Globals.hh
+ /mnt/f/geant4_install/include/Geant4/PTL/Types.hh
+ /mnt/f/geant4_install/include/Geant4/PTL/Utility.hh
+ /mnt/f/geant4_install/include/Geant4/geomdefs.hh
+ /mnt/f/geant4_install/include/Geant4/geomwdefs.hh
+ /mnt/f/geant4_install/include/Geant4/globals.hh
+ /mnt/f/geant4_install/include/Geant4/pwdefs.hh
  /mnt/f/geant4_install/include/Geant4/templates.hh
  /mnt/f/geant4_install/include/Geant4/tls.hh
  /mnt/f/geant4_install/include/Geant4/tools/histo/axes

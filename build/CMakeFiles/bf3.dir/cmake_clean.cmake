@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o"
   "CMakeFiles/bf3.dir/src/Run.cc.o"
   "CMakeFiles/bf3.dir/src/RunAction.cc.o"
+  "CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o"
   "bf3"
   "bf3.pdb"
 )

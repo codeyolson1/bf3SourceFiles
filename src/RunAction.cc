@@ -25,10 +25,11 @@
 
 #include <iostream>
 #include <fstream>
+
 RunAction::RunAction() : G4UserRunAction()
 {
-  outFileName = "EDep_BF3_";
-  
+  fMessenger = new RunActionMessenger(this);
+  outFileName = "test";
 }
 //
 //
@@ -61,4 +62,12 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
   } else {
     myAnalysis->Save();
   }
+}
+
+//
+//
+
+void RunAction::SetFileName(G4String name)
+{
+  outFileName = name;
 }
