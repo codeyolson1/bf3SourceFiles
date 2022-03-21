@@ -1,6 +1,8 @@
+/RunAction/FileName group-14
 
 # BF3 Source:
 # Pos X box:
+/gps/particle neutron
 /gps/pos/type Volume 
 /gps/pos/shape Para
 /gps/pos/halfx 1 cm
@@ -8,23 +10,23 @@
 /gps/pos/halfz 5 cm
 /gps/pos/centre 7.65 0 0 cm
 /gps/ang/type iso
-/control/execute PuBeSpec.mac
+/gps/energy 2.19e-2 MeV
 
 # Neg X box:
 /gps/source/add 1
-
+/gps/particle neutron
 /gps/pos/type Volume 
 /gps/pos/shape Para
 /gps/pos/halfx 1 cm
 /gps/pos/halfy 3.2 cm
 /gps/pos/halfz 5 cm
 /gps/pos/centre -7.65 0 0 cm
-/gps/ang/type iso
-/control/execute PuBeSpec.mac
+/gps/ang/type iso 
+/gps/energy 2.19e-2 MeV
 
 # Pos Y box:
 /gps/source/add 2.70
-
+/gps/particle neutron
 /gps/pos/type Volume 
 /gps/pos/shape Para
 /gps/pos/halfx 8.65 cm
@@ -32,11 +34,11 @@
 /gps/pos/halfz 5 cm
 /gps/pos/centre 0 4.2 0 cm
 /gps/ang/type iso 
-/control/execute PuBeSpec.mac
+/gps/energy 2.19e-2 MeV
 
 # Neg Y box:
 /gps/source/add 2.70
-
+/gps/particle neutron
 /gps/pos/type Volume 
 /gps/pos/shape Para
 /gps/pos/halfx 8.65 cm
@@ -44,5 +46,6 @@
 /gps/pos/halfz 5 cm
 /gps/pos/centre 0 -4.2 0 cm
 /gps/ang/type iso 
-/control/execute PuBeSpec.mac
-/run/beamOn 1000000
+/gps/energy 2.19e-2 MeV
+
+/run/beamOn 100000000

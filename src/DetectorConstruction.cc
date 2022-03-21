@@ -158,15 +158,18 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
 void DetectorConstruction::ConstructSDandField()
 {
+  auto* neutronFilter = new G4SDParticleFilter("n-filter", "neutron");
   G4MultiFunctionalDetector* bf3Detector1 = new G4MultiFunctionalDetector("BF31");
   G4SDManager::GetSDMpointer()->AddNewDetector(bf3Detector1);
   G4VPrimitiveScorer* energyDep1 = new G4PSEnergyDeposit("EnergyDep1");
+  energyDep1->SetFilter(neutronFilter);
   bf3Detector1->RegisterPrimitive(energyDep1);
   SetSensitiveDetector("BF3 Gas1", bf3Detector1);
 
   G4MultiFunctionalDetector* bf3Detector2 = new G4MultiFunctionalDetector("BF32");
   G4SDManager::GetSDMpointer()->AddNewDetector(bf3Detector2);
   G4VPrimitiveScorer* energyDep2 = new G4PSEnergyDeposit("EnergyDep2");
+  energyDep2->SetFilter(neutronFilter);
   bf3Detector2->RegisterPrimitive(energyDep2);
   SetSensitiveDetector("BF3 Gas2", bf3Detector2);
   

@@ -29,7 +29,7 @@
 RunAction::RunAction() : G4UserRunAction()
 {
   fMessenger = new RunActionMessenger(this);
-  outFileName = "test";
+  outFileName = "PuBeTest";
 }
 //
 //
