@@ -48,4 +48,4 @@
 /gps/ang/type iso 
 /gps/energy 1.92 MeV
 
-/run/beamOn 100000000
+/run/beamOn 10000000

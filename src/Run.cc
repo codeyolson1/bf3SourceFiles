@@ -50,7 +50,7 @@ void Run::Merge(const G4Run* aRun)
 void Run::RecordEvent(const G4Event* anEvent)
 {
   G4int eventNum = anEvent->GetEventID();
-  if (eventNum % 10000 == 0) {
+  if (eventNum % 100000 == 0) {
     std::cout << "Event number " << eventNum << " started." << std::endl;
   }
   Analysis* myAnalysis = Analysis::GetAnalysis();
@@ -59,10 +59,11 @@ void Run::RecordEvent(const G4Event* anEvent)
   G4PrimaryVertex* pVertex = anEvent->GetPrimaryVertex();
   G4ThreeVector primPos = pVertex->GetPosition();
   G4PrimaryParticle* primary = pVertex->GetPrimary();
-  G4double primEnergy = primary->GetKineticEnergy();
-  myAnalysis->FillPrimaryEne(primEnergy/MeV);
-  myAnalysis->FillPrimaryPos(primPos.getX()/cm, primPos.getY()/cm);
-
+  if (primary->GetG4code()->GetParticleName() == "neutron") {
+    G4double primEnergy = primary->GetKineticEnergy();
+    myAnalysis->FillPrimaryEne(primEnergy/MeV);
+    myAnalysis->FillPrimaryPos(primPos.getX()/cm, primPos.getY()/cm);
+  }
   //G4cout << "Primary Energy is: " << energy/MeV << G4endl;
   G4HCofThisEvent* hce = anEvent->GetHCofThisEvent();
 

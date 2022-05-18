@@ -19,6 +19,7 @@
 #include "G4HadronPhysicsQGSP_BIC_HP.hh"
 #include "G4HadronPhysicsQGSP_BIC_AllHP.hh"
 #include "G4HadronPhysicsQGSP_BIC.hh"
+#include "G4HadronPhysicsQGSP_BERT_HP.hh"
 #include "G4HadronInelasticQBBC.hh"
 #include "G4HadronPhysicsINCLXX.hh"
 #include "G4HadronPhysicsShielding.hh"
@@ -34,6 +35,11 @@
 
 //#include "GammaNuclearPhysics.hh"
 #include "G4RadioactiveDecayPhysics.hh"
+#include "G4DecayPhysics.hh"
+#include "G4NeutronHPThermalScattering.hh"
+#include "G4NeutronHPElastic.hh"
+#include "G4NeutronHPInelastic.hh"
+#include "G4NeutronHPCapture.hh"
 
 // particles
 
@@ -44,7 +50,7 @@
 #include "G4BaryonConstructor.hh"
 #include "G4IonConstructor.hh"
 #include "G4ShortLivedConstructor.hh"
-
+#include "NeutronHPphysics.hh"
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 PhysicsList::PhysicsList()
@@ -60,14 +66,14 @@ PhysicsList::PhysicsList()
   
   // Hadron Elastic scattering
   //
-  RegisterPhysics( new G4HadronElasticPhysicsHP(verb));
-  ///RegisterPhysics( new G4HadronElasticPhysicsXS(verb));  
-
+  RegisterPhysics( new NeutronHPphysics("neutronHP"));
+  //RegisterPhysics( new G4HadronElasticPhysicsXS(verb));  
   // Hadron Inelastic physics
   //
   ////RegisterPhysics( new G4HadronPhysicsFTFP_BERT_HP(verb));
-  RegisterPhysics( new G4HadronPhysicsQGSP_BIC_HP(verb));
-  ////RegisterPhysics( new G4HadronPhysicsQGSP_BIC_AllHP(verb));
+  //RegisterPhysics( new G4HadronPhysicsQGSP_BIC_HP(verb));
+  //RegisterPhysics( new G4HadronPhysicsQGSP_BIC_AllHP(verb));
+  //RegisterPhysics( new G4HadronPhysicsQGSP_BERT_HP(verb));
   ////RegisterPhysics( new G4HadronPhysicsQGSP_BIC(verb));  
   ////RegisterPhysics( new G4HadronInelasticQBBC(verb));
   ////RegisterPhysics( new G4HadronPhysicsINCLXX(verb));
@@ -92,7 +98,8 @@ PhysicsList::PhysicsList()
   //RegisterPhysics( new GammaNuclearPhysics("gamma"));
   
   // Radioactive decay
-  //RegisterPhysics(new G4RadioactiveDecayPhysics());
+  RegisterPhysics(new G4RadioactiveDecayPhysics());
+  RegisterPhysics(new G4DecayPhysics());
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

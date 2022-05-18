@@ -1,0 +1,32 @@
+{
+  "files.associations": {
+    "*.cpp": "cpp",
+    "*.icc": "cpp",
+    "algorithm": "cpp",
+    "array": "cpp",
+    "*.tcc": "cpp",
+    "buffer": "cpp",
+    "chrono": "cpp",
+    "deque": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "memory": "cpp",
+    "memory_resource": "cpp",
+    "netfwd": "cpp",
+    "numeric": "cpp",
+    "optional": "cpp",
+    "random": "cpp",
+    "ratio": "cpp",
+    "set": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "system_error": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "unordered_map": "cpp",
+    "utility": "cpp",
+    "vector": "cpp"
+  }
+}

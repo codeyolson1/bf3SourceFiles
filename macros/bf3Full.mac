@@ -1,0 +1,13 @@
+
+# BF3 Source:
+# Pos X box:
+/gps/pos/type Volume 
+/gps/pos/shape Para
+/gps/pos/confine AirSource
+/gps/pos/halfx 8.65 cm
+/gps/pos/halfy 5.2 cm
+/gps/pos/halfz 5 cm
+/gps/pos/centre 0 0 0 cm
+/gps/ang/type iso
+/control/execute PuBeSpec.mac
+/run/beamOn 10000000
