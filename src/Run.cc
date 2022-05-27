@@ -71,30 +71,30 @@ void Run::RecordEvent(const G4Event* anEvent)
   if (!hce) return;
   G4THitsMap<G4double>* eventMap1 = 0;
   eventMap1 = static_cast<G4THitsMap<G4double>*>(hce->GetHC(collID1));
-  if (eventMap1 && eventMap1->entries() >= 1) {
+  if ((eventMap1 && eventMap1->entries() >= 1)) {
     G4double val1 = 0.;
     for (auto itr = eventMap1->begin(); itr != eventMap1->end(); itr++) {
       val1 += *itr->second;
     }
     //G4cout << "Detector 1: " << val1/MeV << G4endl;
-    if (val1 > 0.) {
-      myAnalysis->FillEDep1(val1/MeV);
-      myAnalysis->FillEDepTot(val1/MeV);
+    if ((val1) > 0./MeV) {
+      myAnalysis->FillEDep1((val1)/MeV);
+      myAnalysis->FillEDepTot((val1)/MeV);
     }
   }
   G4int collID2 = sdMan->GetCollectionID("BF32/EnergyDep2");
   if (!hce) return;
   G4THitsMap<G4double>* eventMap2 = 0;
   eventMap2 = static_cast<G4THitsMap<G4double>*>(hce->GetHC(collID2));
-  if (eventMap2 && eventMap2->entries() >= 1) {
+  if ((eventMap2 && eventMap2->entries() >= 1)) {
     G4double val2 = 0.;
     for (auto itr = eventMap2->begin(); itr != eventMap2->end(); itr++) {
       val2 += *itr->second;
     }
     //G4cout << "Detector 2: " << val2/MeV << G4endl;
-    if (val2 > 0.) {
-      myAnalysis->FillEDep2(val2/MeV);
-      myAnalysis->FillEDepTot(val2/MeV);
+    if ((val2) > 0./MeV) {
+      myAnalysis->FillEDep2((val2)/MeV);
+      myAnalysis->FillEDepTot((val2)/MeV);
     }
   }
   

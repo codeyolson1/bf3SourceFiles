@@ -29,28 +29,36 @@
 RunAction::RunAction() : G4UserRunAction()
 {
   fMessenger = new RunActionMessenger(this);
-  outFileName = "PuBeTest";
+  outFileName = "BF3Full";
 }
+
 //
 //
+
 RunAction::~RunAction()
 {}
+
 //
 //
+
 G4Run* RunAction::GenerateRun()
 {
   return new Run();
 }
+
 //
 //
+
 void RunAction::BeginOfRunAction(const G4Run*)
 {
   Analysis* myAnalysis = Analysis::GetAnalysis();
   myAnalysis->Book(outFileName);
   myAnalysis->OpenFile(outFileName);
 } 
+
 //
 //
+
 void RunAction::EndOfRunAction(const G4Run* aRun)
 {
   Analysis* myAnalysis = Analysis::GetAnalysis();

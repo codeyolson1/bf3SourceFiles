@@ -9,5 +9,5 @@
 /gps/pos/halfz 5 cm
 /gps/pos/centre 0 0 0 cm
 /gps/ang/type iso
-/control/execute PuBeSpec.mac
+/control/execute walker_PuBeSpec.mac
 /run/beamOn 10000000
