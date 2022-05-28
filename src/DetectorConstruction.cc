@@ -67,7 +67,7 @@ void DetectorConstruction::ConstructMaterials()
   G4Material* poly = nist->FindOrBuildMaterial("G4_POLYETHYLENE");
   fmats["poly"] = poly;
   // Fill gases:
-  G4Material* bf3 = new G4Material("Boron Trifluoride", 2.73e-3*g/cm3, 2, kStateGas, 293*kelvin, 1.*atmosphere); // From Walker Dissertation
+  G4Material* bf3 = new G4Material("Boron Trifluoride", 2.73e-3*g/cm3, 2, kStateGas, 293.*kelvin, 1.*atmosphere); // From Walker Dissertation
   G4Element* boron = nist->FindOrBuildElement(5, true);
   G4Element* fluorine = nist->FindOrBuildElement(9, true);
   G4Element* hydrogen = nist->FindOrBuildElement(1, true);
@@ -75,7 +75,7 @@ void DetectorConstruction::ConstructMaterials()
   bf3->AddElement(fluorine, 3);
   fmats["bf3"] = bf3;
 
-  G4Material* bf3En = new G4Material("Boron Trifluoride (Enriched)", 2.73e-3*g/cm3, 2, kStateGas, 293*kelvin, 1.*atmosphere); // From Walker Dissertai
+  G4Material* bf3En = new G4Material("Boron Trifluoride (Enriched)", 2.73e-3*g/cm3, 2, kStateGas, 293.*kelvin, 1.*atmosphere); // From Walker Dissertai
   G4Element* enrBoron = new G4Element("Enriched Boron", "B", 2);
   G4Isotope* boron10 = new G4Isotope("Boron10", 5, 10, 10.012936862*g/mole); // 
   G4Isotope* boron11 = new G4Isotope("Boron11", 5, 11, 11.009305167*g/mole); //
@@ -175,7 +175,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   G4double modx, mody, modz;
 
   // Tube and moderator dimensions:
-  tubeDiam = 4.4*cm;
+  tubeDiam = 4.6*cm;
   tubeHeight = 10*cm;
   modx = tubeDiam*2. + 4.5*cm; mody = tubeDiam + 2.*cm; modz = tubeHeight;
 
