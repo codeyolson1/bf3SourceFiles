@@ -1,55 +1,25 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/f/bf3SourceFiles/main.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/main.cc.o"
-  "/mnt/f/bf3SourceFiles/src/ActionInitialization.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/ActionInitialization.cc.o"
-  "/mnt/f/bf3SourceFiles/src/Analysis.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/Analysis.cc.o"
-  "/mnt/f/bf3SourceFiles/src/DetectorConstruction.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o"
-  "/mnt/f/bf3SourceFiles/src/EventAction.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/EventAction.cc.o"
-  "/mnt/f/bf3SourceFiles/src/G4HadronElasticPhysicsHP.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o"
-  "/mnt/f/bf3SourceFiles/src/G4PSEnergyDeposit.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.o"
-  "/mnt/f/bf3SourceFiles/src/NeutronHPphysics.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o"
-  "/mnt/f/bf3SourceFiles/src/PhysicsList.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/PhysicsList.cc.o"
-  "/mnt/f/bf3SourceFiles/src/PrimaryGeneratorAction.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o"
-  "/mnt/f/bf3SourceFiles/src/Run.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/Run.cc.o"
-  "/mnt/f/bf3SourceFiles/src/RunAction.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/RunAction.cc.o"
-  "/mnt/f/bf3SourceFiles/src/RunActionMessenger.cc" "/mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "G4INTY_USE_QT"
-  "G4INTY_USE_XT"
-  "G4LIB_BUILD_DLL"
-  "G4UI_USE_QT"
-  "G4UI_USE_TCSH"
-  "G4VIS_USE_OPENGL"
-  "G4VIS_USE_OPENGLQT"
-  "G4VIS_USE_OPENGLX"
-  "G4VIS_USE_RAYTRACERX"
-  "QT_CORE_LIB"
-  "QT_GUI_LIB"
-  "QT_OPENGL_LIB"
-  "QT_PRINTSUPPORT_LIB"
-  "QT_WIDGETS_LIB"
-  "TOOLS_USE_NATIVE_MPI"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../include"
-  "/mnt/f/geant4_install/include/Geant4"
-  "/usr/include/x86_64-linux-gnu/qt5"
-  "/usr/include/x86_64-linux-gnu/qt5/QtCore"
-  "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"
-  "/usr/include/x86_64-linux-gnu/qt5/QtGui"
-  "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
-  "/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"
-  "/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/main.cc" "CMakeFiles/bf3.dir/main.cc.o" "gcc" "CMakeFiles/bf3.dir/main.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/ActionInitialization.cc" "CMakeFiles/bf3.dir/src/ActionInitialization.cc.o" "gcc" "CMakeFiles/bf3.dir/src/ActionInitialization.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/Analysis.cc" "CMakeFiles/bf3.dir/src/Analysis.cc.o" "gcc" "CMakeFiles/bf3.dir/src/Analysis.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/DetectorConstruction.cc" "CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o" "gcc" "CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/EventAction.cc" "CMakeFiles/bf3.dir/src/EventAction.cc.o" "gcc" "CMakeFiles/bf3.dir/src/EventAction.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/G4HadronElasticPhysicsHP.cc" "CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o" "gcc" "CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/NeutronHPphysics.cc" "CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o" "gcc" "CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/PhysicsList.cc" "CMakeFiles/bf3.dir/src/PhysicsList.cc.o" "gcc" "CMakeFiles/bf3.dir/src/PhysicsList.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/PrimaryGeneratorAction.cc" "CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o" "gcc" "CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/Run.cc" "CMakeFiles/bf3.dir/src/Run.cc.o" "gcc" "CMakeFiles/bf3.dir/src/Run.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/RunAction.cc" "CMakeFiles/bf3.dir/src/RunAction.cc.o" "gcc" "CMakeFiles/bf3.dir/src/RunAction.cc.o.d"
+  "/Users/Toad/Desktop/vscodeSpaces/bf3SourceFiles/src/RunActionMessenger.cc" "CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o" "gcc" "CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o.d"
   )
 
 # Targets to which this target links.

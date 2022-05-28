@@ -21,8 +21,6 @@
 #include "G4VPrimitiveScorer.hh"
 #include "G4StatAnalysis.hh"
 #include "G4RunManager.hh"
-#include "G4ConvergenceTester.hh"
-
 #include <iostream>
 #include <fstream>
 
