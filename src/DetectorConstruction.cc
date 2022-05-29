@@ -148,6 +148,9 @@ void DetectorConstruction::ConstructMaterials()
 
   G4Material* aluminum = nist->FindOrBuildMaterial("G4_Al");
   fmats["aluminum"] = aluminum;
+
+  G4Material* galactic = nist->FindOrBuildMaterial("G4_GALACTIC");
+  fmats["galactic"] = galactic;
 }
 
 G4VPhysicalVolume* DetectorConstruction::Construct()
@@ -165,7 +168,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   // Construction:
   G4Box* solidWorld = new G4Box("World", 0.5*worldX, 0.5*worldY,0.5*worldZ);
-  G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld, fmats["air"], "World");
+  G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld, fmats["galactic"], "World");
   G4VPhysicalVolume* physWorld = new G4PVPlacement(0, G4ThreeVector(), logicWorld, "World", 0, false, 0, checkOverlaps);
 
   // 
