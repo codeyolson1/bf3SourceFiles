@@ -149,7 +149,7 @@ void DetectorConstruction::ConstructMaterials()
   G4Material* aluminum = nist->FindOrBuildMaterial("G4_Al");
   fmats["aluminum"] = aluminum;
 
-  G4Material* galactic = nist->FindOrBuildMaterial("G4_GALACTIC");
+  G4Material* galactic = nist->FindOrBuildMaterial("G4_Galactic");
   fmats["galactic"] = galactic;
 }
 
@@ -218,7 +218,6 @@ void DetectorConstruction::ConstructSDandField()
   G4SDParticleFilter* nFilter = new G4SDParticleFilter("NeutronFilter");
   nFilter->add("alpha");
   nFilter->add("GenericIon");
-  nFilter->add("neutron");
 
   G4MultiFunctionalDetector* bf3Detector1 = new G4MultiFunctionalDetector("BF31");
   G4SDManager::GetSDMpointer()->AddNewDetector(bf3Detector1);
