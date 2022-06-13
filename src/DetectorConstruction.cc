@@ -214,6 +214,9 @@ void DetectorConstruction::ConstructSDandField()
   nFilter->add("alpha");
   nFilter->add("GenericIon");
   nFilter->add("neutron");
+  nFilter->add("proton");
+  nFilter->add("triton");
+  
 
   G4MultiFunctionalDetector* bf3Detector1 = new G4MultiFunctionalDetector("BF31");
   G4SDManager::GetSDMpointer()->AddNewDetector(bf3Detector1);
