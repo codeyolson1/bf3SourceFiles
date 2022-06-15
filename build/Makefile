@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/f/bf3SourceFiles
+CMAKE_SOURCE_DIR = /mnt/f/githubRepos/bf3SourceFiles
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/f/bf3SourceFiles/build
+CMAKE_BINARY_DIR = /mnt/f/githubRepos/bf3SourceFiles/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/bf3SourceFiles/build/CMakeFiles /mnt/f/bf3SourceFiles/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles /mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/bf3SourceFiles/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -316,60 +316,6 @@ src/EventAction.s: src/EventAction.cc.s
 src/EventAction.cc.s:
 	$(MAKE) -f CMakeFiles/bf3.dir/build.make CMakeFiles/bf3.dir/src/EventAction.cc.s
 .PHONY : src/EventAction.cc.s
-
-src/G4HadronElasticPhysicsHP.o: src/G4HadronElasticPhysicsHP.cc.o
-
-.PHONY : src/G4HadronElasticPhysicsHP.o
-
-# target to build an object file
-src/G4HadronElasticPhysicsHP.cc.o:
-	$(MAKE) -f CMakeFiles/bf3.dir/build.make CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o
-.PHONY : src/G4HadronElasticPhysicsHP.cc.o
-
-src/G4HadronElasticPhysicsHP.i: src/G4HadronElasticPhysicsHP.cc.i
-
-.PHONY : src/G4HadronElasticPhysicsHP.i
-
-# target to preprocess a source file
-src/G4HadronElasticPhysicsHP.cc.i:
-	$(MAKE) -f CMakeFiles/bf3.dir/build.make CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.i
-.PHONY : src/G4HadronElasticPhysicsHP.cc.i
-
-src/G4HadronElasticPhysicsHP.s: src/G4HadronElasticPhysicsHP.cc.s
-
-.PHONY : src/G4HadronElasticPhysicsHP.s
-
-# target to generate assembly for a file
-src/G4HadronElasticPhysicsHP.cc.s:
-	$(MAKE) -f CMakeFiles/bf3.dir/build.make CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.s
-.PHONY : src/G4HadronElasticPhysicsHP.cc.s
-
-src/G4PSEnergyDeposit.o: src/G4PSEnergyDeposit.cc.o
-
-.PHONY : src/G4PSEnergyDeposit.o
-
-# target to build an object file
-src/G4PSEnergyDeposit.cc.o:
-	$(MAKE) -f CMakeFiles/bf3.dir/build.make CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.o
-.PHONY : src/G4PSEnergyDeposit.cc.o
-
-src/G4PSEnergyDeposit.i: src/G4PSEnergyDeposit.cc.i
-
-.PHONY : src/G4PSEnergyDeposit.i
-
-# target to preprocess a source file
-src/G4PSEnergyDeposit.cc.i:
-	$(MAKE) -f CMakeFiles/bf3.dir/build.make CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.i
-.PHONY : src/G4PSEnergyDeposit.cc.i
-
-src/G4PSEnergyDeposit.s: src/G4PSEnergyDeposit.cc.s
-
-.PHONY : src/G4PSEnergyDeposit.s
-
-# target to generate assembly for a file
-src/G4PSEnergyDeposit.cc.s:
-	$(MAKE) -f CMakeFiles/bf3.dir/build.make CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.s
-.PHONY : src/G4PSEnergyDeposit.cc.s
 
 src/NeutronHPphysics.o: src/NeutronHPphysics.cc.o
 
@@ -562,12 +508,6 @@ help:
 	@echo "... src/EventAction.o"
 	@echo "... src/EventAction.i"
 	@echo "... src/EventAction.s"
-	@echo "... src/G4HadronElasticPhysicsHP.o"
-	@echo "... src/G4HadronElasticPhysicsHP.i"
-	@echo "... src/G4HadronElasticPhysicsHP.s"
-	@echo "... src/G4PSEnergyDeposit.o"
-	@echo "... src/G4PSEnergyDeposit.i"
-	@echo "... src/G4PSEnergyDeposit.s"
 	@echo "... src/NeutronHPphysics.o"
 	@echo "... src/NeutronHPphysics.i"
 	@echo "... src/NeutronHPphysics.s"

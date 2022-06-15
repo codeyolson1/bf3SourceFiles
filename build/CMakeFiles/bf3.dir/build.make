@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/f/bf3SourceFiles
+CMAKE_SOURCE_DIR = /mnt/f/githubRepos/bf3SourceFiles
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/f/bf3SourceFiles/build
+CMAKE_BINARY_DIR = /mnt/f/githubRepos/bf3SourceFiles/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/bf3.dir/depend.make
@@ -59,172 +59,146 @@ include CMakeFiles/bf3.dir/flags.make
 
 CMakeFiles/bf3.dir/main.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/main.cc.o: ../main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bf3.dir/main.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/main.cc.o -c /mnt/f/bf3SourceFiles/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bf3.dir/main.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/main.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/main.cc
 
 CMakeFiles/bf3.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/main.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/main.cc > CMakeFiles/bf3.dir/main.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/main.cc > CMakeFiles/bf3.dir/main.cc.i
 
 CMakeFiles/bf3.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/main.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/main.cc -o CMakeFiles/bf3.dir/main.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/main.cc -o CMakeFiles/bf3.dir/main.cc.s
 
 CMakeFiles/bf3.dir/src/ActionInitialization.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/ActionInitialization.cc.o: ../src/ActionInitialization.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bf3.dir/src/ActionInitialization.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/ActionInitialization.cc.o -c /mnt/f/bf3SourceFiles/src/ActionInitialization.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bf3.dir/src/ActionInitialization.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/ActionInitialization.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/ActionInitialization.cc
 
 CMakeFiles/bf3.dir/src/ActionInitialization.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/ActionInitialization.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/ActionInitialization.cc > CMakeFiles/bf3.dir/src/ActionInitialization.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/ActionInitialization.cc > CMakeFiles/bf3.dir/src/ActionInitialization.cc.i
 
 CMakeFiles/bf3.dir/src/ActionInitialization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/ActionInitialization.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/ActionInitialization.cc -o CMakeFiles/bf3.dir/src/ActionInitialization.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/ActionInitialization.cc -o CMakeFiles/bf3.dir/src/ActionInitialization.cc.s
 
 CMakeFiles/bf3.dir/src/Analysis.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/Analysis.cc.o: ../src/Analysis.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bf3.dir/src/Analysis.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/Analysis.cc.o -c /mnt/f/bf3SourceFiles/src/Analysis.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bf3.dir/src/Analysis.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/Analysis.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/Analysis.cc
 
 CMakeFiles/bf3.dir/src/Analysis.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/Analysis.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/Analysis.cc > CMakeFiles/bf3.dir/src/Analysis.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/Analysis.cc > CMakeFiles/bf3.dir/src/Analysis.cc.i
 
 CMakeFiles/bf3.dir/src/Analysis.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/Analysis.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/Analysis.cc -o CMakeFiles/bf3.dir/src/Analysis.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/Analysis.cc -o CMakeFiles/bf3.dir/src/Analysis.cc.s
 
 CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o: ../src/DetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o -c /mnt/f/bf3SourceFiles/src/DetectorConstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/DetectorConstruction.cc
 
 CMakeFiles/bf3.dir/src/DetectorConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/DetectorConstruction.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/DetectorConstruction.cc > CMakeFiles/bf3.dir/src/DetectorConstruction.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/DetectorConstruction.cc > CMakeFiles/bf3.dir/src/DetectorConstruction.cc.i
 
 CMakeFiles/bf3.dir/src/DetectorConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/DetectorConstruction.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/DetectorConstruction.cc -o CMakeFiles/bf3.dir/src/DetectorConstruction.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/DetectorConstruction.cc -o CMakeFiles/bf3.dir/src/DetectorConstruction.cc.s
 
 CMakeFiles/bf3.dir/src/EventAction.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/EventAction.cc.o: ../src/EventAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bf3.dir/src/EventAction.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/EventAction.cc.o -c /mnt/f/bf3SourceFiles/src/EventAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bf3.dir/src/EventAction.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/EventAction.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/EventAction.cc
 
 CMakeFiles/bf3.dir/src/EventAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/EventAction.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/EventAction.cc > CMakeFiles/bf3.dir/src/EventAction.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/EventAction.cc > CMakeFiles/bf3.dir/src/EventAction.cc.i
 
 CMakeFiles/bf3.dir/src/EventAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/EventAction.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/EventAction.cc -o CMakeFiles/bf3.dir/src/EventAction.cc.s
-
-CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o: CMakeFiles/bf3.dir/flags.make
-CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o: ../src/G4HadronElasticPhysicsHP.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o -c /mnt/f/bf3SourceFiles/src/G4HadronElasticPhysicsHP.cc
-
-CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/G4HadronElasticPhysicsHP.cc > CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.i
-
-CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/G4HadronElasticPhysicsHP.cc -o CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.s
-
-CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.o: CMakeFiles/bf3.dir/flags.make
-CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.o: ../src/G4PSEnergyDeposit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.o -c /mnt/f/bf3SourceFiles/src/G4PSEnergyDeposit.cc
-
-CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/G4PSEnergyDeposit.cc > CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.i
-
-CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/G4PSEnergyDeposit.cc -o CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/EventAction.cc -o CMakeFiles/bf3.dir/src/EventAction.cc.s
 
 CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o: ../src/NeutronHPphysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o -c /mnt/f/bf3SourceFiles/src/NeutronHPphysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/NeutronHPphysics.cc
 
 CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/NeutronHPphysics.cc > CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/NeutronHPphysics.cc > CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.i
 
 CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/NeutronHPphysics.cc -o CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/NeutronHPphysics.cc -o CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.s
 
 CMakeFiles/bf3.dir/src/PhysicsList.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/PhysicsList.cc.o: ../src/PhysicsList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/bf3.dir/src/PhysicsList.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/PhysicsList.cc.o -c /mnt/f/bf3SourceFiles/src/PhysicsList.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/bf3.dir/src/PhysicsList.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/PhysicsList.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/PhysicsList.cc
 
 CMakeFiles/bf3.dir/src/PhysicsList.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/PhysicsList.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/PhysicsList.cc > CMakeFiles/bf3.dir/src/PhysicsList.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/PhysicsList.cc > CMakeFiles/bf3.dir/src/PhysicsList.cc.i
 
 CMakeFiles/bf3.dir/src/PhysicsList.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/PhysicsList.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/PhysicsList.cc -o CMakeFiles/bf3.dir/src/PhysicsList.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/PhysicsList.cc -o CMakeFiles/bf3.dir/src/PhysicsList.cc.s
 
 CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o: ../src/PrimaryGeneratorAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o -c /mnt/f/bf3SourceFiles/src/PrimaryGeneratorAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/PrimaryGeneratorAction.cc
 
 CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/PrimaryGeneratorAction.cc > CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/PrimaryGeneratorAction.cc > CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.i
 
 CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/PrimaryGeneratorAction.cc -o CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/PrimaryGeneratorAction.cc -o CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.s
 
 CMakeFiles/bf3.dir/src/Run.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/Run.cc.o: ../src/Run.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/bf3.dir/src/Run.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/Run.cc.o -c /mnt/f/bf3SourceFiles/src/Run.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/bf3.dir/src/Run.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/Run.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/Run.cc
 
 CMakeFiles/bf3.dir/src/Run.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/Run.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/Run.cc > CMakeFiles/bf3.dir/src/Run.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/Run.cc > CMakeFiles/bf3.dir/src/Run.cc.i
 
 CMakeFiles/bf3.dir/src/Run.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/Run.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/Run.cc -o CMakeFiles/bf3.dir/src/Run.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/Run.cc -o CMakeFiles/bf3.dir/src/Run.cc.s
 
 CMakeFiles/bf3.dir/src/RunAction.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/RunAction.cc.o: ../src/RunAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/bf3.dir/src/RunAction.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/RunAction.cc.o -c /mnt/f/bf3SourceFiles/src/RunAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/bf3.dir/src/RunAction.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/RunAction.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/RunAction.cc
 
 CMakeFiles/bf3.dir/src/RunAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/RunAction.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/RunAction.cc > CMakeFiles/bf3.dir/src/RunAction.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/RunAction.cc > CMakeFiles/bf3.dir/src/RunAction.cc.i
 
 CMakeFiles/bf3.dir/src/RunAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/RunAction.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/RunAction.cc -o CMakeFiles/bf3.dir/src/RunAction.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/RunAction.cc -o CMakeFiles/bf3.dir/src/RunAction.cc.s
 
 CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o: CMakeFiles/bf3.dir/flags.make
 CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o: ../src/RunActionMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o -c /mnt/f/bf3SourceFiles/src/RunActionMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bf3.dir/src/RunActionMessenger.cc.o -c /mnt/f/githubRepos/bf3SourceFiles/src/RunActionMessenger.cc
 
 CMakeFiles/bf3.dir/src/RunActionMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bf3.dir/src/RunActionMessenger.cc.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/bf3SourceFiles/src/RunActionMessenger.cc > CMakeFiles/bf3.dir/src/RunActionMessenger.cc.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/githubRepos/bf3SourceFiles/src/RunActionMessenger.cc > CMakeFiles/bf3.dir/src/RunActionMessenger.cc.i
 
 CMakeFiles/bf3.dir/src/RunActionMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bf3.dir/src/RunActionMessenger.cc.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/bf3SourceFiles/src/RunActionMessenger.cc -o CMakeFiles/bf3.dir/src/RunActionMessenger.cc.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/githubRepos/bf3SourceFiles/src/RunActionMessenger.cc -o CMakeFiles/bf3.dir/src/RunActionMessenger.cc.s
 
 # Object files for target bf3
 bf3_OBJECTS = \
@@ -233,8 +207,6 @@ bf3_OBJECTS = \
 "CMakeFiles/bf3.dir/src/Analysis.cc.o" \
 "CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o" \
 "CMakeFiles/bf3.dir/src/EventAction.cc.o" \
-"CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o" \
-"CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.o" \
 "CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o" \
 "CMakeFiles/bf3.dir/src/PhysicsList.cc.o" \
 "CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o" \
@@ -250,8 +222,6 @@ bf3: CMakeFiles/bf3.dir/src/ActionInitialization.cc.o
 bf3: CMakeFiles/bf3.dir/src/Analysis.cc.o
 bf3: CMakeFiles/bf3.dir/src/DetectorConstruction.cc.o
 bf3: CMakeFiles/bf3.dir/src/EventAction.cc.o
-bf3: CMakeFiles/bf3.dir/src/G4HadronElasticPhysicsHP.cc.o
-bf3: CMakeFiles/bf3.dir/src/G4PSEnergyDeposit.cc.o
 bf3: CMakeFiles/bf3.dir/src/NeutronHPphysics.cc.o
 bf3: CMakeFiles/bf3.dir/src/PhysicsList.cc.o
 bf3: CMakeFiles/bf3.dir/src/PrimaryGeneratorAction.cc.o
@@ -307,7 +277,7 @@ bf3: /mnt/f/geant4_install/lib/libG4global.so
 bf3: /mnt/f/geant4_install/lib/libG4clhep.so
 bf3: /mnt/f/geant4_install/lib/libG4ptl.so.0.0.2
 bf3: CMakeFiles/bf3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/f/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable bf3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable bf3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bf3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -320,6 +290,6 @@ CMakeFiles/bf3.dir/clean:
 .PHONY : CMakeFiles/bf3.dir/clean
 
 CMakeFiles/bf3.dir/depend:
-	cd /mnt/f/bf3SourceFiles/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/f/bf3SourceFiles /mnt/f/bf3SourceFiles /mnt/f/bf3SourceFiles/build /mnt/f/bf3SourceFiles/build /mnt/f/bf3SourceFiles/build/CMakeFiles/bf3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/f/githubRepos/bf3SourceFiles/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/f/githubRepos/bf3SourceFiles /mnt/f/githubRepos/bf3SourceFiles /mnt/f/githubRepos/bf3SourceFiles/build /mnt/f/githubRepos/bf3SourceFiles/build /mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/bf3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bf3.dir/depend
 

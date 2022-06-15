@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/f/bf3SourceFiles
+CMAKE_SOURCE_DIR = /mnt/f/githubRepos/bf3SourceFiles
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/f/bf3SourceFiles/build
+CMAKE_BINARY_DIR = /mnt/f/githubRepos/bf3SourceFiles/build
 
 # Utility rule file for BoronTriFluorideDetector.
 
@@ -71,6 +71,6 @@ CMakeFiles/BoronTriFluorideDetector.dir/clean:
 .PHONY : CMakeFiles/BoronTriFluorideDetector.dir/clean
 
 CMakeFiles/BoronTriFluorideDetector.dir/depend:
-	cd /mnt/f/bf3SourceFiles/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/f/bf3SourceFiles /mnt/f/bf3SourceFiles /mnt/f/bf3SourceFiles/build /mnt/f/bf3SourceFiles/build /mnt/f/bf3SourceFiles/build/CMakeFiles/BoronTriFluorideDetector.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/f/githubRepos/bf3SourceFiles/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/f/githubRepos/bf3SourceFiles /mnt/f/githubRepos/bf3SourceFiles /mnt/f/githubRepos/bf3SourceFiles/build /mnt/f/githubRepos/bf3SourceFiles/build /mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/BoronTriFluorideDetector.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/BoronTriFluorideDetector.dir/depend
 
