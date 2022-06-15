@@ -64,9 +64,9 @@ void Analysis::Book(G4String runName)
   man->SetFirstNtupleId(0);
   man->SetFirstNtupleColumnId(0);
 
-  eDepHist1 = man->CreateH1("BF3EnergyDep1", "BF3EnergyDep1", 1000, 0., 5.);
-  eDepHist2 = man->CreateH1("BF3EnergyDep2", "BF3EnergyDep2", 1000, 0., 5.);
-  eDepHistTot = man->CreateH1("BF3EnergyDepTot", "BF3EnergyDepTot", 1000, 0., 5.);
+  eDepHist1 = man->CreateH1("BF3EnergyDep1", "BF3EnergyDep1", 512, 0., 5.);
+  eDepHist2 = man->CreateH1("BF3EnergyDep2", "BF3EnergyDep2", 512, 0., 5.);
+  eDepHistTot = man->CreateH1("BF3EnergyDepTot", "BF3EnergyDepTot", 512, 0., 5.);
 
   const std::vector<G4double> binEdges = {2.00E-07,7.28E-07,1.34E-06,2.84E-06,8.22E-06,1.64E-05,6.39E-05,1.65E-04,3.27E-04,6.94E-04,2.71E-03,5.12E-03,1.09E-02,2.29E-02,2.88E-02,2.65E-02,2.80E-02,3.75E-02,5.00E-02,9.39E-02,1.55E-01,2.55E-01,4.11E-01,4.41E-01,6.27E-01,7.18E-01,8.78E-01,9.03E-01,1.18E+00,1.70E+00,1.95E+00,2.19E+00,2.54E+00,2.47E+00,2.39E+00,2.57E+00,2.99E+00,3.29E+00,4.35E+00,6.26E+00,7.17E+00,8.75E+00,9.81E+00,1.14E+01,1.44E+01,1.62E+01,2.04E+01};
 
