@@ -1,0 +1,51 @@
+/gps/particle neutron
+/gps/ene/type User
+/gps/hist/type energy
+/gps/hist/point 	0	
+/gps/hist/point 	0	0.00000E+00
+/gps/hist/point 	1.47013E-16	4.61606E-23
+/gps/hist/point 	1.44935E-16	6.70238E-23
+/gps/hist/point 	6.96104E-16	6.81465E-22
+/gps/hist/point 	1.88052E-15	5.99528E-21
+/gps/hist/point 	2.6026E-15	1.46617E-20
+/gps/hist/point 	1.94805E-14	5.17968E-19
+/gps/hist/point 	2.23896E-13	1.43370E-17
+/gps/hist/point 	3.13766E-13	3.48124E-17
+/gps/hist/point 	9.24675E-13	2.23540E-16
+/gps/hist/point 	1.55844E-10	1.76197E-13
+/gps/hist/point 	3.11688E-10	5.51688E-13
+/gps/hist/point 	3.11688E-10	1.16793E-12
+/gps/hist/point 	8.72727E-10	6.92273E-12
+/gps/hist/point 	3.91688E-10	2.67954E-12
+/gps/hist/point 	1.58961E-10	3.65769E-13
+/gps/hist/point 	1.8961E-10	3.56847E-13
+/gps/hist/point 	3.27273E-10	1.88836E-12
+/gps/hist/point 	4.67532E-10	4.22649E-12
+/gps/hist/point 	4.88312E-09	1.29456E-10
+/gps/hist/point 	4.88312E-09	2.13446E-10
+/gps/hist/point 	1.50649E-08	1.08573E-09
+/gps/hist/point 	1.97403E-08	2.25138E-09
+/gps/hist/point 	1.19481E-08	8.55719E-10
+/gps/hist/point 	2.75325E-08	3.55279E-09
+/gps/hist/point 	2.33766E-08	2.55343E-09
+/gps/hist/point 	2.7013E-08	3.66404E-09
+/gps/hist/point 	1.76623E-08	1.37961E-09
+/gps/hist/point 	3.37662E-08	6.14917E-09
+/gps/hist/point 	6.02597E-08	2.11174E-08
+/gps/hist/point 	3.11688E-08	9.33818E-09
+/gps/hist/point 	2.28571E-08	6.11429E-09
+/gps/hist/point 	2.17143E-08	6.74880E-09
+/gps/hist/point 	6.85714E-09	7.84457E-10
+/gps/hist/point 	1.03896E-09	2.03636E-11
+/gps/hist/point 	5.71429E-09	5.75429E-10
+/gps/hist/point 	1.45455E-08	3.77164E-09
+/gps/hist/point 	1.4026E-08	4.01984E-09
+/gps/hist/point 	3.06494E-08	2.04401E-08
+/gps/hist/point 	4.23377E-08	5.44928E-08
+/gps/hist/point 	2.07273E-08	2.27876E-08
+/gps/hist/point 	2.33766E-08	3.13925E-08
+/gps/hist/point 	1.92208E-08	2.30438E-08
+/gps/hist/point 	1.2987E-08	1.80896E-08
+/gps/hist/point 	1.24675E-09	2.76031E-09
+/gps/hist/point 	1.63636E-10	3.23509E-10
+/gps/hist/point 	6.07792E-11	1.90908E-10
