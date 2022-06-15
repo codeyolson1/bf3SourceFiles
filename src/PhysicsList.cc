@@ -89,7 +89,7 @@ PhysicsList::PhysicsList()
   
   // Ion Inelastic physics
   //
-  RegisterPhysics( new G4IonPhysics(verb));
+  RegisterPhysics( new G4IonPhysicsXS(verb));
   ////RegisterPhysics( new G4IonPhysicsPHP(verb));
   ////RegisterPhysics( new G4IonQMDPhysics(verb));
   ////RegisterPhysics( new G4IonINCLXXPhysics(verb));
