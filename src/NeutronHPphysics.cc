@@ -45,7 +45,8 @@
 #include "G4ParticleHPThermalScatteringData.hh"
 #include "G4ParticleHPElastic.hh"
 #include "G4ParticleHPThermalScattering.hh"
-
+#include "G4HadronElastic.hh"
+#include "G4HadronElasticDataSet.hh"
 #include "G4NeutronInelasticProcess.hh"
 #include "G4ParticleHPInelasticData.hh"
 #include "G4ParticleHPInelastic.hh"
@@ -88,6 +89,7 @@ void NeutronHPphysics::ConstructProcess()
   process = pManager->GetProcess("hadElastic");
   if (process) pManager->RemoveProcess(process);
   //
+  /*
   process = pManager->GetProcess("neutronInelastic");
   if (process) pManager->RemoveProcess(process);
   //
@@ -96,7 +98,7 @@ void NeutronHPphysics::ConstructProcess()
   //
   process = pManager->GetProcess("nFission");      
   if (process) pManager->RemoveProcess(process);      
-         
+  */
   // (re) create process: elastic
   //
   G4HadronElasticProcess* process1 = new G4HadronElasticProcess();
@@ -114,7 +116,11 @@ void NeutronHPphysics::ConstructProcess()
     process1->RegisterMe(model1b);
     process1->AddDataSet(new G4ParticleHPThermalScatteringData());
   }
-   
+  G4HadronElastic* model1c = new G4HadronElastic();
+  model1c->SetMinEnergy(20.*MeV);
+  process1->RegisterMe(model1c);
+  process1->AddDataSet(new G4HadronElasticDataSet());
+  /*
   // (re) create process: inelastic
   //
   G4NeutronInelasticProcess* process2 = new G4NeutronInelasticProcess();
@@ -153,6 +159,7 @@ void NeutronHPphysics::ConstructProcess()
   // models
   G4ParticleHPFission* model4 = new G4ParticleHPFission();
   process4->RegisterMe(model4);
+  */
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
