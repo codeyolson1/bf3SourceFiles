@@ -1,8 +1,0 @@
-/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/install/local.dir
-/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/edit_cache.dir
-/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/install.dir
-/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/list_install_components.dir
-/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/rebuild_cache.dir
-/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/BoronTriFluorideDetector.dir
-/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/install/strip.dir
-/mnt/f/githubRepos/bf3SourceFiles/build/CMakeFiles/bf3.dir
