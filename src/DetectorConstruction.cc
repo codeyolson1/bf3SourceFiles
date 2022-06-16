@@ -218,7 +218,9 @@ void DetectorConstruction::ConstructSDandField()
   nFilter->add("deuteron");
   nFilter->add("triton");
   nFilter->addIon(3,7); // Li7
+  nFilter->addIon(3,6); // Li6
   nFilter->addIon(5,10); // B-10
+  nFilter->addIon(5,11); // B-11
 
   
   G4MultiFunctionalDetector* bf3Detector1 = new G4MultiFunctionalDetector("BF31");
