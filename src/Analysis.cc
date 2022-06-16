@@ -68,9 +68,9 @@ void Analysis::Book(G4String runName)
   eDepHist2 = man->CreateH1("BF3EnergyDep2", "BF3EnergyDep2", 512, 0., 5.);
   eDepHistTot = man->CreateH1("BF3EnergyDepTot", "BF3EnergyDepTot", 512, 0., 5.);
 
-  const std::vector<G4double> binEdges = {2.00E-07,7.28E-07,1.34E-06,2.84E-06,8.22E-06,1.64E-05,6.39E-05,1.65E-04,3.27E-04,6.94E-04,2.71E-03,5.12E-03,1.09E-02,2.29E-02,2.88E-02,2.65E-02,2.80E-02,3.75E-02,5.00E-02,9.39E-02,1.55E-01,2.55E-01,4.11E-01,4.41E-01,6.27E-01,7.18E-01,8.78E-01,9.03E-01,1.18E+00,1.70E+00,1.95E+00,2.19E+00,2.54E+00,2.47E+00,2.39E+00,2.57E+00,2.99E+00,3.29E+00,4.35E+00,6.26E+00,7.17E+00,8.75E+00,9.81E+00,1.14E+01,1.44E+01,1.62E+01,2.04E+01};
+const std::vector<G4double> binEdges = {1.00E-11,1.00E-07,4.14E-07,8.76E-07,1.86E-06,5.04E-06,1.07E-05,3.73E-05,1.01E-04,2.14E-04,4.54E-04,1.58E-03,3.35E-03,7.10E-03,1.50E-02,2.19E-02,2.42E-02,3.18E-02,4.09E-02,6.74E-02,1.11E-01,1.83E-01,2.97E-01,3.69E-01,4.98E-01,6.08E-01,7.43E-01,8.23E-01,1.00E+00,1.35E+00,1.65E+00,1.92E+00,2.23E+00,2.35E+00,2.37E+00,2.47E+00,2.73E+00,3.01E+00,3.68E+00,4.97E+00,6.07E+00,7.41E+00,8.61E+00,1.00E+01,1.22E+01,1.42E+01,1.73E+01};
 
-  primEneHist = man->CreateH1("PrimEnergy", "PrimaryEnergy", 50, 0., 20.);
+  primEneHist = man->CreateH1("PrimEnergy", "PrimaryEnergy", binEdges);
   primPosHist = man->CreateH2("PrimaryPosition", "PrimaryPosition", 180, -9., 9., 110, -5.5, 5.5);
   
   return; 
