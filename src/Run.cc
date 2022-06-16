@@ -66,7 +66,6 @@ void Run::RecordEvent(const G4Event* anEvent)
   }
   //G4cout << "Primary Energy is: " << energy/MeV << G4endl;
   G4HCofThisEvent* hce = anEvent->GetHCofThisEvent();
-
   G4int collID1 = sdMan->GetCollectionID("BF31/EnergyDep1");
   if (!hce) return;
   G4THitsMap<G4double>* eventMap1 = 0;
