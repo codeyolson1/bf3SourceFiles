@@ -12,7 +12,7 @@
 #include "G4SystemOfUnits.hh"
 #include "G4UnitsTable.hh"
 
-#include "G4HadronElasticPhysicsHP.hh"
+#include "G4HadronElasticPhysicsPHP.hh"
 #include "G4HadronElasticPhysicsXS.hh"
 
 #include "G4HadronPhysicsFTFP_BERT_HP.hh"
@@ -33,6 +33,8 @@
 #include "G4IonPhysicsPHP.hh"
 #include "G4IonINCLXXPhysics.hh"
 #include "G4EmExtraPhysics.hh"
+#include "G4StoppingPhysics.hh"
+#include "G4EmStandardPhysics_option4.hh"
 //#include "GammaNuclearPhysics.hh"
 #include "G4RadioactiveDecayPhysics.hh"
 #include "G4DecayPhysics.hh"
@@ -40,7 +42,7 @@
 #include "G4NeutronHPElastic.hh"
 #include "G4NeutronHPInelastic.hh"
 #include "G4NeutronHPCapture.hh"
-
+#include "G4ThermalNeutrons.hh"
 // particles
 
 #include "G4BosonConstructor.hh"
@@ -58,6 +60,7 @@ PhysicsList::PhysicsList()
 {
   G4int verb = 1;  
   SetVerboseLevel(verb);
+  SetCutValue(0, "proton");
   
   //add new units for cross sections
   // 
@@ -66,8 +69,10 @@ PhysicsList::PhysicsList()
   
   // Hadron Elastic scattering
   //
-  RegisterPhysics( new NeutronHPphysics("neutronHP"));
-  //RegisterPhysics( new G4HadronElasticPhysicsXS(verb));  
+  //
+  RegisterPhysics( new G4HadronElasticPhysicsPHP(verb));
+  //RegisterPhysics( new NeutronHPphysics("neutronHP"));
+  RegisterPhysics( new G4ThermalNeutrons(verb));
   // Hadron Inelastic physics
   //
   ////RegisterPhysics( new G4HadronPhysicsFTFP_BERT_HP(verb));
@@ -80,7 +85,7 @@ PhysicsList::PhysicsList()
   ////RegisterPhysics( new G4HadronPhysicsShielding(verb));
     
   // Electromagnetic physics:
-  RegisterPhysics( new G4EmLivermorePhysics(verb));
+  RegisterPhysics( new G4EmStandardPhysics_option4(verb));
   RegisterPhysics( new G4EmExtraPhysics(verb));
   
   // Ion Elastic scattering
@@ -89,8 +94,9 @@ PhysicsList::PhysicsList()
   
   // Ion Inelastic physics
   //
-  RegisterPhysics( new G4IonPhysicsXS(verb));
-  ////RegisterPhysics( new G4IonPhysicsPHP(verb));
+  ///RegisterPhysics( new G4IonPhysicsXS(verb));
+  RegisterPhysics( new G4IonPhysicsPHP(verb));
+  RegisterPhysics( new G4StoppingPhysics(verb));
   ////RegisterPhysics( new G4IonQMDPhysics(verb));
   ////RegisterPhysics( new G4IonINCLXXPhysics(verb));
 
