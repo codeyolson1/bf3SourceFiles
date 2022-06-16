@@ -117,7 +117,7 @@ void NeutronHPphysics::ConstructProcess()
     process1->AddDataSet(new G4ParticleHPThermalScatteringData());
   }
   G4HadronElastic* model1c = new G4HadronElastic();
-  model1c->SetMinEnergy(20.*MeV);
+  model1c->SetMinEnergy(19.5*MeV);
   process1->RegisterMe(model1c);
   process1->AddDataSet(new G4HadronElasticDataSet());
   /*
