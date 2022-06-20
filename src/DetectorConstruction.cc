@@ -83,9 +83,9 @@ void DetectorConstruction::ConstructMaterials()
   enrBoron->AddIsotope(boron11, 4.*perCent);
   bf3En->AddElement(enrBoron, 1);
   bf3En->AddElement(fluorine, 3);
-  fmats["enrBF3"] = bf3En;
+  //fmats["enrBF3"] = bf3En;
 
-/*
+
 // Material info from :
 // https://gitlab.cern.ch/clemenci/Geant4-srcs/-/blob/92686251452762ac5947193b5f02ba43b77f546b/examples/extended/hadronic/FissionFragment/src/FFDetectorConstruction.cc
     G4double const B10Enrichment = 0.96;
@@ -134,7 +134,7 @@ void DetectorConstruction::ConstructMaterials()
                          B11MassFraction);              // mass fraction
     fmats["enrBF3"]->AddElement(flouride,                      // element
                          flourideMassFraction);         // mass fraction
-*/
+
 
   G4Material* he3 = new G4Material("Helium 3", 5.39e-4*g/cm3, 1, kStateGas, 293*kelvin, 4.*atmosphere); // From Walker Dissertai
   G4Element* helium = new G4Element("Helium", "He", 1);
@@ -182,10 +182,10 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   // Construct BF3 Detectors:
   // SS Shells
   G4Tubs* bf3ShellSolid1 = new G4Tubs("BF3 Shell1", 0, 0.5*tubeDiam, 0.5*tubeHeight, 0, 360.*deg);
-  G4LogicalVolume* bf3ShellLogic1 = new G4LogicalVolume(bf3ShellSolid1, fmats["aluminum"], "BF3 Shell1");
+  G4LogicalVolume* bf3ShellLogic1 = new G4LogicalVolume(bf3ShellSolid1, fmats["steel"], "BF3 Shell1");
   new G4PVPlacement(0, G4ThreeVector(tubeDiam*0.5 + 0.5*cm, 0, 0), bf3ShellLogic1, "BF3 Shell1", logicWorld, false, 0, checkOverlaps);
   G4Tubs* bf3ShellSolid2 = new G4Tubs("BF3 Shell2", 0, 0.5*tubeDiam, 0.5*tubeHeight, 0, 360.*deg);
-  G4LogicalVolume* bf3ShellLogic2 = new G4LogicalVolume(bf3ShellSolid2, fmats["aluminum"], "BF3 Shell2");
+  G4LogicalVolume* bf3ShellLogic2 = new G4LogicalVolume(bf3ShellSolid2, fmats["steel"], "BF3 Shell2");
   new G4PVPlacement(0, G4ThreeVector(-tubeDiam*0.5 - 0.5*cm, 0, 0), bf3ShellLogic2, "BF3 Shell2", logicWorld, false, 0, checkOverlaps);
   // BF3 fill gas:
   G4Tubs* bf3GasSolid1 = new G4Tubs("BF3 Gas1", 0, 0.5*(tubeDiam - 2.*mm), 0.5*(tubeHeight - 2.*mm), 0, 360.*deg);
