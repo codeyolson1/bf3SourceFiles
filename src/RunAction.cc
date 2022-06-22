@@ -28,7 +28,7 @@
 RunAction::RunAction() : G4UserRunAction()
 {
   fMessenger = new RunActionMessenger(this);
-  outFileName = "BF3Full";
+  outFileName = "BF3Full.root";
 }
 
 //
