@@ -10,7 +10,7 @@
 #include "G4MultiFunctionalDetector.hh"
 #include "G4VPrimitiveScorer.hh"
 #include "G4SDManager.hh"
-#include "g4root.hh"
+#include "G4GenericAnalysisManager.hh"
 #include "G4RootAnalysisManager.hh"
 #include "G4ConvergenceTester.hh"
 
@@ -56,7 +56,7 @@ Analysis* Analysis::GetAnalysis()
 void Analysis::Book(G4String runName)
 {
   convergenceName = runName;
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->SetVerboseLevel(2);
   #ifdef G4MULTITHREADED
     man->SetNtupleMerging(true);
@@ -81,7 +81,7 @@ const std::vector<G4double> binEdges = {1.00E-11,1.00E-07,4.14E-07,8.76E-07,1.86
 
 void Analysis::OpenFile(const G4String& fileName)
 {
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->OpenFile(fileName.c_str());
 
   return;
@@ -92,7 +92,7 @@ void Analysis::OpenFile(const G4String& fileName)
 
 void Analysis::Save()
 {
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->Write();
 
   return;
@@ -103,7 +103,7 @@ void Analysis::Save()
 
 void Analysis::Close(G4bool reset)
 {
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->CloseFile(reset);
 
   return;
@@ -115,7 +115,7 @@ void Analysis::Close(G4bool reset)
 void Analysis::FillEDep1(G4double eDep)
 {
   //G4cout << "Adding Energy Deposittion. " << G4endl;+
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->FillH1(eDepHist1, eDep);
   G4AutoLock l(&aMutex);
   fConvTest1->AddScore(eDep);
@@ -128,7 +128,7 @@ void Analysis::FillEDep1(G4double eDep)
 void Analysis::FillEDep2(G4double eDep)
 {
   //G4cout << "Adding Energy Deposittion. " << G4endl;+
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->FillH1(eDepHist2, eDep);
   return;
 }
@@ -139,7 +139,7 @@ void Analysis::FillEDep2(G4double eDep)
 void Analysis::FillEDepTot(G4double eDep)
 {
   //G4cout << "Adding Energy Deposittion. " << G4endl;+
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->FillH1(eDepHistTot, eDep);
   return;
 }
@@ -149,7 +149,7 @@ void Analysis::FillEDepTot(G4double eDep)
 
 void Analysis::FillPrimaryEne(G4double energy)
 { 
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->FillH1(primEneHist, energy);
   return;
 }
@@ -159,7 +159,7 @@ void Analysis::FillPrimaryEne(G4double energy)
 
 void Analysis::FillPrimaryPos(G4double xPos, G4double yPos)
 {
-  G4AnalysisManager* man = G4AnalysisManager::Instance();
+  G4GenericAnalysisManager* man = G4GenericAnalysisManager::Instance();
   man->FillH2(primPosHist, xPos, yPos);
   return;
 }
