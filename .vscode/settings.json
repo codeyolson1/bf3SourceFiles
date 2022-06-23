@@ -32,6 +32,6 @@
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
   "cmake.configureOnOpen": true,
   "cmake.configureArgs": [
-    "-DGeant4_DIR=/opt/local/lib/Geant4/Geant4.10.6/Geant4-10.6.3/"
+    "-DGeant4_DIR=/mnt/f/geant4-11.0.2-install/lib/Geant4-11.0.2/"
   ],
 }
