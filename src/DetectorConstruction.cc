@@ -79,8 +79,8 @@ void DetectorConstruction::ConstructMaterials()
   G4Element* enrBoron = new G4Element("Enriched Boron", "B", 2);
   G4Isotope* boron10 = new G4Isotope("Boron10", 5, 10, 10.012936862*g/mole); // 
   G4Isotope* boron11 = new G4Isotope("Boron11", 5, 11, 11.009305167*g/mole); //
-  enrBoron->AddIsotope(boron10, 96.*perCent);
-  enrBoron->AddIsotope(boron11, 4.*perCent);
+  enrBoron->AddIsotope(boron10, 99.*perCent);
+  enrBoron->AddIsotope(boron11, 1.*perCent);
   bf3En->AddElement(enrBoron, 1);
   bf3En->AddElement(fluorine, 3);
   //fmats["enrBF3"] = bf3En;
