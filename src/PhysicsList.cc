@@ -22,7 +22,8 @@
 #include "G4HadronPhysicsQGSP_BERT_HP.hh"
 #include "G4HadronInelasticQBBC.hh"
 #include "G4HadronPhysicsINCLXX.hh"
-#include "G4HadronPhysicsShielding.hh"
+#include "G4HadronPhysicsShieldingLEND.hh"
+#include "G4HadronElasticPhysicsLEND.hh"
 
 #include "G4EmStandardPhysics.hh"
 #include "G4EmLivermorePhysics.hh"
@@ -70,20 +71,20 @@ PhysicsList::PhysicsList()
   // Hadron Elastic scattering
   //
   //
-  RegisterPhysics( new G4HadronElasticPhysicsPHP(verb));
+  RegisterPhysics( new G4HadronElasticPhysicsLEND(verb));
   //RegisterPhysics( new NeutronHPphysics("neutronHP"));
-  RegisterPhysics( new G4ThermalNeutrons(verb));
+  
   // Hadron Inelastic physics
   //
   ////RegisterPhysics( new G4HadronPhysicsFTFP_BERT_HP(verb));
   //RegisterPhysics( new G4HadronPhysicsQGSP_BIC_HP(verb));
-  RegisterPhysics( new G4HadronPhysicsQGSP_BIC_AllHP(verb));
+  //RegisterPhysics( new G4HadronPhysicsQGSP_BIC_AllHP(verb));
   //RegisterPhysics( new G4HadronPhysicsQGSP_BERT_HP(verb));
   ////RegisterPhysics( new G4HadronPhysicsQGSP_BIC(verb));  
   ////RegisterPhysics( new G4HadronInelasticQBBC(verb));
   ////RegisterPhysics( new G4HadronPhysicsINCLXX(verb));
-  ////RegisterPhysics( new G4HadronPhysicsShielding(verb));
-    
+  RegisterPhysics( new G4HadronPhysicsShieldingLEND(verb));
+  RegisterPhysics( new G4ThermalNeutrons(verb));  
   // Electromagnetic physics:
   RegisterPhysics( new G4EmStandardPhysics_option4(verb));
   RegisterPhysics( new G4EmExtraPhysics(verb));
