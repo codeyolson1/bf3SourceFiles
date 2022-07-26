@@ -83,7 +83,8 @@ PhysicsList::PhysicsList()
   ////RegisterPhysics( new G4HadronPhysicsQGSP_BIC(verb));  
   ////RegisterPhysics( new G4HadronInelasticQBBC(verb));
   ////RegisterPhysics( new G4HadronPhysicsINCLXX(verb));
-  RegisterPhysics( new G4HadronPhysicsShieldingLEND(verb));
+  //RegisterPhysics( new G4HadronPhysicsShieldingLEND(verb));
+  RegisterPhysics( new G4HadronPhysicsQGSP_BIC_AllHP());
   RegisterPhysics( new G4ThermalNeutrons(verb));  
   // Electromagnetic physics:
   RegisterPhysics( new G4EmStandardPhysics_option4(verb));

@@ -11,7 +11,7 @@
 
 #include "ActionInitialization.hh"
 #include "DetectorConstruction.hh"
-#include "QGSP_BIC_AllHP.hh"
+#include "QGSP_BIC_HP.hh"
 #include "G4ParticleHPManager.hh"
 #include "globals.hh"
 #include "PhysicsList.hh"
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 
   runManager->SetUserInitialization(new DetectorConstruction());
 
-  G4VModularPhysicsList* physicsList = new PhysicsList();
+  G4VModularPhysicsList* physicsList = new QGSP_BIC_HP();
   //G4VModularPhysicsList* physicsList = new QGSP_BIC_AllHP();
   physicsList->SetDefaultCutValue(700*CLHEP::um);
   physicsList->SetVerboseLevel(1);
