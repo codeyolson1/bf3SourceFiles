@@ -176,7 +176,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
   // Tube and moderator dimensions:
   tubeDiam = 4.6*cm;
-  tubeHeight = 10*cm;
+  tubeHeight = 10.*cm;
   modx = tubeDiam*2. + 4.5*cm; mody = tubeDiam + 2.*cm; modz = tubeHeight;
 
   // Construct BF3 Detectors:
