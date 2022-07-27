@@ -11,11 +11,11 @@
 
 #include "ActionInitialization.hh"
 #include "DetectorConstruction.hh"
-#include "QGSP_BIC_HP.hh"
+#include "QGSP_BIC_AllHP.hh"
 #include "G4ParticleHPManager.hh"
 #include "globals.hh"
 #include "PhysicsList.hh"
-
+#include "G4ThermalNeutrons.hh"
 int main(int argc, char** argv)
 {
     G4UIExecutive* ui = 0;
@@ -24,11 +24,13 @@ int main(int argc, char** argv)
   }
 
   G4Random::setTheEngine(new CLHEP::MixMaxRng);
+  G4Random::setTheSeed(time(NULL));
   G4MTRunManager* runManager = new G4MTRunManager;
 
   runManager->SetUserInitialization(new DetectorConstruction());
 
-  G4VModularPhysicsList* physicsList = new QGSP_BIC_HP();
+  G4VModularPhysicsList* physicsList = new QGSP_BIC_AllHP();
+  physicsList->RegisterPhysics( new G4ThermalNeutrons());
   //G4VModularPhysicsList* physicsList = new QGSP_BIC_AllHP();
   physicsList->SetDefaultCutValue(700*CLHEP::um);
   physicsList->SetVerboseLevel(1);
