@@ -176,7 +176,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
   // Tube and moderator dimensions:
   tubeDiam = 4.6*cm;
-  tubeHeight = 10.*cm;
+  tubeHeight = 10.0*cm;
   modx = tubeDiam*2. + 4.5*cm; mody = tubeDiam + 2.*cm; modz = tubeHeight;
 
   // Construct BF3 Detectors:
@@ -187,13 +187,24 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   G4Tubs* bf3ShellSolid2 = new G4Tubs("BF3 Shell2", 0, 0.5*tubeDiam, 0.5*tubeHeight, 0, 360.*deg);
   G4LogicalVolume* bf3ShellLogic2 = new G4LogicalVolume(bf3ShellSolid2, fmats["steel"], "BF3 Shell2");
   new G4PVPlacement(0, G4ThreeVector(-tubeDiam*0.5 - 0.5*cm, 0, 0), bf3ShellLogic2, "BF3 Shell2", logicWorld, false, 0, checkOverlaps);
+  // Visual Stuff for shells
+  G4VisAttributes* shellAttr = new G4VisAttributes(G4Colour(192., 192., 192.)); // silver
+  shellAttr->SetForceWireframe(true);
+  bf3ShellLogic1->SetVisAttributes(shellAttr);
+  bf3ShellLogic2->SetVisAttributes(shellAttr);
   // BF3 fill gas:
-  G4Tubs* bf3GasSolid1 = new G4Tubs("BF3 Gas1", 0, 0.5*(tubeDiam - 2.*mm), 0.5*(tubeHeight - 2.*mm), 0, 360.*deg);
+  G4Tubs* bf3GasSolid1 = new G4Tubs("BF3 Gas1", 0, 0.5*(tubeDiam - 2.*mm), 0.5*(tubeHeight), 0, 360.*deg);
   G4LogicalVolume* bf3GasLogic1 = new G4LogicalVolume(bf3GasSolid1, fmats["enrBF3"], "BF3 Gas1");
   new G4PVPlacement(0, G4ThreeVector(0, 0, 0), bf3GasLogic1, "BF3 Gas1", bf3ShellLogic1, false, 0, checkOverlaps);
-  G4Tubs* bf3GasSolid2 = new G4Tubs("BF3 Gas2", 0, 0.5*(tubeDiam - 2.*mm), 0.5*(tubeHeight - 2.*mm), 0, 360.*deg);
+  G4Tubs* bf3GasSolid2 = new G4Tubs("BF3 Gas2", 0, 0.5*(tubeDiam - 2.*mm), 0.5*(tubeHeight), 0, 360.*deg);
   G4LogicalVolume* bf3GasLogic2 = new G4LogicalVolume(bf3GasSolid2, fmats["enrBF3"], "BF3 Gas2");
   new G4PVPlacement(0, G4ThreeVector(0, 0, 0), bf3GasLogic2, "BF3 Gas2", bf3ShellLogic2, false, 0, checkOverlaps);
+  // Visual Stuff for gas
+  G4VisAttributes* gasAttr = new G4VisAttributes(G4Colour(255., 0., 0.)); // red
+  gasAttr->SetForceSolid(true);
+  bf3GasLogic1->SetVisAttributes(gasAttr);
+  bf3GasLogic2->SetVisAttributes(gasAttr);
+
   // Moderator:
   G4Box* moderatorDummy1 = new G4Box("BF3 Moderator Dummy", 0.5*modx, 0.5*mody, 0.5*modz);
   G4Tubs* moderatorVoidDummy1 = new G4Tubs("BF3 Moderator Void Dummy", 0, 0.5*tubeDiam, 0.5*(tubeHeight + 1.*cm), 0, 360.*deg);
@@ -201,12 +212,21 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   G4VSolid* bf3ModeratorSolid = new G4SubtractionSolid("BF3 Moderator", bf3ModeratorTemp, moderatorVoidDummy1, 0, G4ThreeVector(-tubeDiam*0.5 - 0.5*cm, 0, 0));
   G4LogicalVolume* moderatorBF3Logic = new G4LogicalVolume(bf3ModeratorSolid, fmats["poly"], "ModeratorBF3");
   new G4PVPlacement(0, G4ThreeVector(0, 0, 0), moderatorBF3Logic, "ModeratorBF3", logicWorld, false, 0, checkOverlaps);
+  // Visual Stuff for moderator
+  G4VisAttributes* moderatorAttr = new G4VisAttributes(G4Colour()); // white
+  moderatorAttr->SetForceSolid(true);
+  moderatorBF3Logic->SetVisAttributes(moderatorAttr);
 
-  G4Box* airSourceDummy = new G4Box("AirSourceDummy", (modx + 4.*cm)*0.5, (mody + 4.*cm)*0.5, 5.*cm);
-  G4VSolid* airSource = new G4SubtractionSolid("AirSource", airSourceDummy, moderatorDummy1, 0, G4ThreeVector(0, 0, 0));
+  // Air Source
+  G4Box* airSourceDummy = new G4Box("AirSourceDummy", (modx + 4.*cm)*0.5, (mody + 4.*cm)*0.5, 0.5*(modz));
+  G4Box* moderatorDummy2 = new G4Box("ModeratorDummy2", 0.5*modx, 0.5*mody, 0.5*(modz + 0.5*cm));
+  G4VSolid* airSource = new G4SubtractionSolid("AirSource", airSourceDummy, moderatorDummy2, 0, G4ThreeVector(0, 0, 0));
   G4LogicalVolume* airLogic = new G4LogicalVolume(airSource, fmats["air"], "AirSource");
   new G4PVPlacement(0, G4ThreeVector(0, 0, 0), airLogic, "AirSource", logicWorld, false, 0, checkOverlaps);
-
+  // visual Stuff for Air source
+  G4VisAttributes* airAttr = new G4VisAttributes(G4Colour(0., 255., 0.)); // green
+  airAttr->SetForceSolid(true);
+  airLogic->SetVisAttributes(airAttr);
   return physWorld;
 }
 
@@ -214,13 +234,17 @@ void DetectorConstruction::ConstructSDandField()
 {
   G4SDParticleFilter* nFilter = new G4SDParticleFilter("NeutronFilter");
   nFilter->add("alpha");
-  nFilter->add("proton");
-  nFilter->add("deuteron");
-  nFilter->add("triton");
   nFilter->addIon(3,7); // Li7
   nFilter->addIon(3,6); // Li6
+  nFilter->add("proton");
+  nFilter->addIon(4,10); // Be10
+  nFilter->add("deuteron");
+  nFilter->addIon(4,9); // Be9
+  nFilter->add("triton");
+  nFilter->addIon(4, 8); // Be8
   nFilter->addIon(5,10); // B-10
   nFilter->addIon(5,11); // B-11
+  nFilter->add("neutron");
 
   
   G4MultiFunctionalDetector* bf3Detector1 = new G4MultiFunctionalDetector("BF31");
