@@ -9,4 +9,4 @@
 /gps/pos/centre 0 0 0 cm
 /gps/ang/type iso
 /control/execute bugle96.mac
-/run/beamOn 200000000
+/run/beamOn 100000000
