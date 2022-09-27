@@ -25,6 +25,7 @@ int main(int argc, char** argv)
 
   G4Random::setTheEngine(new CLHEP::MixMaxRng);
   G4Random::setTheSeed(time(NULL));
+  G4cout << "Seed " << G4Random::getTheSeed() << G4endl;
   G4MTRunManager* runManager = new G4MTRunManager;
 
   runManager->SetUserInitialization(new DetectorConstruction());
