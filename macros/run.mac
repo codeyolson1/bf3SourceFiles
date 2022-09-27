@@ -1,4 +1,5 @@
 # BF3 Source:
+/RunAction/FileName BF3Response.root
 # Pos X box:
 /gps/pos/type Volume 
 /gps/pos/shape Para

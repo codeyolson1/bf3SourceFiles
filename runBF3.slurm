@@ -30,8 +30,8 @@ cd $SCRATCHDIR/build
 ./bf3 run.mac
 
 # Copy over the output of my file to my home directory
-cp BF3Response.root $CURRENTDIR/outputs/outputBF3bay-$SLURM_JOB_ID
-cp BF3Response.root-conv.txt $CURRENTDIR/outputs/outputBF3bay-$SLURM_JOB_ID
+cp BF3Response.root $CURRENTDIR/outputs/outputBF3global-$SLURM_JOB_ID
+cp BF3Response.root-conv.txt $CURRENTDIR/outputs/outputBF3global-$SLURM_JOB_ID
 
 # Copy the stdouput to the output folder
 cd $CURRENTDIR
